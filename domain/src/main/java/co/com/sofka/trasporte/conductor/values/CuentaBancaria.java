@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.conductor;
+package co.com.sofka.trasporte.conductor.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -20,24 +20,24 @@ public class CuentaBancaria implements ValueObject<CuentaBancaria.Props>{
     public Props value() {
         return new Props() {
             @Override
-            public String tipoCuenta() {
-                return null;
+            public String TipoCuenta() {
+                return tipoCuenta;
             }
 
             @Override
             public Long NumeroCuenta() {
-                return null;
+                return numeroCuenta;
             }
 
             @Override
             public String Banco() {
-                return null;
+                return banco;
             }
         };
     }
 
     public interface Props {
-        String tipoCuenta();
+        String TipoCuenta();
         Long NumeroCuenta();
         String Banco();
     }
