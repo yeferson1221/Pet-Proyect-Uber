@@ -1,6 +1,8 @@
-package co.com.sofka.trasporte.pasajero;
+package co.com.sofka.trasporte.pasajero.values;
 
 import co.com.sofka.domain.generic.ValueObject;
+
+import java.util.Objects;
 
 public class MedioDepago implements ValueObject<MedioDepago.Props> {
 
@@ -8,9 +10,15 @@ public class MedioDepago implements ValueObject<MedioDepago.Props> {
     private final Tarjeta tarjeta;
 
     public MedioDepago(String tipo, Tarjeta tarjeta) {
-        this.tipo = tipo;
-        this.tarjeta = tarjeta;
+        this.tipo = Objects.requireNonNull(tipo);
+        this.tarjeta = Objects.requireNonNull(tarjeta);
     }
+
+//    Metodo para cambair una tarjeta
+    public MedioDepago cambiarTarjeta(Tarjeta tarjeta) {
+        return new MedioDepago(tipo, tarjeta);
+    }
+
 
     @Override
     public Props value() {
