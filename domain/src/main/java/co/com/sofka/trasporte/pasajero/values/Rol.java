@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.pasajero;
+package co.com.sofka.trasporte.pasajero.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

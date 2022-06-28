@@ -1,6 +1,9 @@
 package co.com.sofka.trasporte.pasajero;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.trasporte.pasajero.values.Email;
+import co.com.sofka.trasporte.pasajero.values.MedioDepago;
+import co.com.sofka.trasporte.pasajero.values.PasajeroId;
 
 public class Pasajero extends AggregateEvent<PasajeroId> {
 

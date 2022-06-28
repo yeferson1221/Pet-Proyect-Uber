@@ -1,6 +1,8 @@
 package co.com.sofka.trasporte.pasajero;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofka.trasporte.pasajero.values.CuentaId;
+import co.com.sofka.trasporte.pasajero.values.Rol;
 
 public class CuentaPasajero extends Entity<CuentaId> {
     private Rol rol;
