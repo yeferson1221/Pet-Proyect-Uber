@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.conductor;
+package co.com.sofka.trasporte.conductor.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
