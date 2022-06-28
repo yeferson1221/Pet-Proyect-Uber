@@ -1,13 +1,15 @@
 package co.com.sofka.trasporte.pedido.values;
 import co.com.sofka.domain.generic.ValueObject;
 
+import java.util.Objects;
+
 public class Valor implements ValueObject<Valor.Props> {
     private final String tipoDeMoneda;
     private final Integer cantidad;
 
     public Valor(String tipoDeMoneda, Integer cantidad) {
-        this.tipoDeMoneda = tipoDeMoneda;
-        this.cantidad = cantidad;
+        this.tipoDeMoneda = Objects.requireNonNull(tipoDeMoneda);
+        this.cantidad = Objects.requireNonNull(cantidad);
     }
 
     @Override
