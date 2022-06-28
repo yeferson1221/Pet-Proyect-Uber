@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.AggregateEvent;
 
 
 public class Conductor extends AggregateEvent<ConductorId>{
-    protected Cuenta cuenta;
+    protected CuentaConductor cuentaConductor;
     protected Vehiculo vehiculo;
-    protected DatosContacto datosContacto; 
+    protected DatosContacto datosContacto;
 }
