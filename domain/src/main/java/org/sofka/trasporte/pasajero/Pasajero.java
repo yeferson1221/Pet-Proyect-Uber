@@ -27,18 +27,18 @@ public class Pasajero extends AggregateEvent<PasajeroId> {
         subscribe(new PasajeroEventCahenge(this));
     }
 
-    public static Pasajero from(PasajeroId id, List<DomainEvent> events){
-        var pasajero = new Pasajero((id));
-        events.forEach(pasajero::applyEvent);
-        return pasajero;
-    }
-
     public void cambiarEmail(Email email) {
         appendChange(new EmailCambiado(email)).apply();
     }
 
-    public void cambiarRol(PasajeroId pasajeroId ,Rol role) {
-        appendChange(new RolCuentaCambiado(pasajeroId, role)).apply();
+    public void cambiarRol(PasajeroId pasajeroId , CuentaId cuentaId,Rol role) {
+        appendChange(new RolCuentaCambiado(pasajeroId, cuentaId, role)).apply();
+    }
+
+    public static Pasajero from(PasajeroId id, List<DomainEvent> events){
+        var pasajero = new Pasajero((id));
+        events.forEach(pasajero::applyEvent);
+        return pasajero;
     }
 
 }

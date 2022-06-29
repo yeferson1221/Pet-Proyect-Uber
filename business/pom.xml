@@ -29,22 +29,9 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.sofka</groupId>
-            <artifactId>domain</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>test</scope>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>

@@ -20,8 +20,8 @@ public class PasajeroEventCahenge extends EventChange {
         });
 
         apply((RolCuentaCambiado event) -> {
-            if (!pasajero.cuentaPasajero.identity().equals(event.getPasajeroId())) {
-                throw new IllegalArgumentException("El Rol No se pudo Cambiar");
+            if (!pasajero.cuentaPasajero.identity().equals(event.getCuentaId())) {
+                throw new IllegalArgumentException("El Rol No se pudo Cambiar porque no existe una cuenta");
             }
             pasajero.cuentaPasajero.cambiarRol(event.getRole());
         });

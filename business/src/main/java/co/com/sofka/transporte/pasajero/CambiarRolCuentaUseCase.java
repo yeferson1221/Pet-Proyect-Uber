@@ -9,13 +9,13 @@ import org.sofka.trasporte.pasajero.command.CambiarRolCuentaCommand;
 public class CambiarRolCuentaUseCase extends UseCase<RequestCommand<CambiarRolCuentaCommand>, ResponseEvents> {
 
     @Override
-    public void executeUseCase(RequestCommand<CambiarRolCuentaCommand> cambiarRolCuentaCommandRequestCommand) {
-        var command = cambiarRolCuentaCommandRequestCommand.getCommand();
+    public void executeUseCase(RequestCommand<CambiarRolCuentaCommand> input) {
+        var command = input.getCommand();
         var pasajero = Pasajero.from(
                   command.getPasajeroId(), repository().getEventsBy(command.getPasajeroId().value())
         );
 
-        pasajero.cambiarRol(command.getPasajeroId(), command.getRole());
+        pasajero.cambiarRol(command.getPasajeroId(), command.getCuentaId(), command.getRole());
 
         emit().onResponse(new ResponseEvents(pasajero.getUncommittedChanges()));
     }
