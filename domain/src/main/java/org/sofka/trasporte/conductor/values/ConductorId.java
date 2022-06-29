@@ -13,4 +13,7 @@ public class ConductorId extends Identity {
     public enum Type {
         PASAPORTE, CC, TI
     }
+    public static ConductorId of(String id) {
+        return new ConductorId(id);
+    }
 }
