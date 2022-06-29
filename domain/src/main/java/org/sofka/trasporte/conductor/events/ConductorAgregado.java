@@ -1,7 +1,6 @@
 package org.sofka.trasporte.conductor.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofka.trasporte.conductor.values.*;
 import org.sofka.trasporte.conductor.values.*;
 
 public class ConductorAgregado extends DomainEvent {

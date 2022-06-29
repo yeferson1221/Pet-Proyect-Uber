@@ -10,4 +10,9 @@ public class IncidenteId extends Identity {
 
     public IncidenteId() {
     }
+
+
+    public static IncidenteId of(String id) {
+        return new IncidenteId(id);
+    }
 }

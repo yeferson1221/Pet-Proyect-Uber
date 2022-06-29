@@ -5,7 +5,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.sofka.trasporte.pedido.events.DescripcionIncidenteCambiado;
 import org.sofka.trasporte.pedido.events.PedidoCreado;
 import org.sofka.trasporte.pedido.events.UbicacionFinalCambiada;
-import co.com.sofka.trasporte.pedido.values.*;
 import org.sofka.trasporte.pedido.values.*;
 
 import java.util.List;

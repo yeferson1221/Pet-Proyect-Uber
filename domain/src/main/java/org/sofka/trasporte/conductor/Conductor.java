@@ -5,7 +5,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.sofka.trasporte.conductor.events.ConductorAgregado;
 import org.sofka.trasporte.conductor.events.RolCambiado;
 import org.sofka.trasporte.conductor.events.VehiculoCambiado;
-import co.com.sofka.trasporte.conductor.values.*;
 import org.sofka.trasporte.conductor.values.*;
 
 import java.util.List;

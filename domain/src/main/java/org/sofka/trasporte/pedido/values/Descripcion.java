@@ -37,4 +37,5 @@ public class Descripcion implements ValueObject<Descripcion.Props> {
         return new Descripcion(descripcion,this.fecha);
     }
 
+
 }

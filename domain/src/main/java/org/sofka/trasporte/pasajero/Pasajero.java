@@ -5,7 +5,6 @@ import co.com.sofka.domain.generic.DomainEvent;
 import org.sofka.trasporte.pasajero.events.EmailCambiado;
 import org.sofka.trasporte.pasajero.events.PasajeroCreado;
 import org.sofka.trasporte.pasajero.events.RolCuentaCambiado;
-import co.com.sofka.trasporte.pasajero.values.*;
 import org.sofka.trasporte.pasajero.values.*;
 
 import java.util.List;
