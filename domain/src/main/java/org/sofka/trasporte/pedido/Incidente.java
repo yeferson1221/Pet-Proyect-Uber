@@ -11,7 +11,7 @@ public class Incidente extends Entity<IncidenteId> {
         this.descripcion = descripcion;
     }
 
-    public void cambiarDescripcion(Descripcion descripcionACambiar) {
+    public void cambiarNuevaDescripcion(Descripcion descripcionACambiar) {
         this.descripcion = descripcion.cambiarDescripcion(descripcionACambiar.value().descripcion());
     }
 

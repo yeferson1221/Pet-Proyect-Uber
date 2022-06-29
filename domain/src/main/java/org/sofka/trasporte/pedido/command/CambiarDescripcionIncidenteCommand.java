@@ -8,7 +8,6 @@ import org.sofka.trasporte.pedido.values.PedidoId;
 // Siempre debe de extender de COMMAND "Command"
 public class CambiarDescripcionIncidenteCommand extends Command {
     private final PedidoId pedidoId;
-
     private final IncidenteId incidenteId;
     private final Descripcion descripcion;
 

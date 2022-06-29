@@ -1,16 +1,15 @@
 package org.sofka.trasporte.pedido.values;
 import co.com.sofka.domain.generic.ValueObject;
-
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Descripcion implements ValueObject<Descripcion.Props> {
     private final String descripcion;
-    private final Date fecha;
+    private final LocalDate fecha;
 
-    public Descripcion(String descripcion, Date fecha) {
+    public Descripcion(String descripcion) {
         this.descripcion = Objects.requireNonNull(descripcion);
-        this.fecha = Objects.requireNonNull(fecha);
+        this.fecha = LocalDate.now();
     }
 
     @Override
@@ -22,20 +21,20 @@ public class Descripcion implements ValueObject<Descripcion.Props> {
             }
 
             @Override
-            public Date fecha() {
+            public LocalDate fecha() {
                 return fecha;
             }
         };
     }
 
+
     public interface Props {
         String descripcion();
-        Date fecha();
+        LocalDate fecha();
     }
 
     public Descripcion cambiarDescripcion(String descripcion){
-        return new Descripcion(descripcion,this.fecha);
+        return new Descripcion(descripcion);
     }
-
 
 }

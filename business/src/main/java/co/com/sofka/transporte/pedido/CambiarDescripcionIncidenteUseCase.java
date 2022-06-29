@@ -15,7 +15,7 @@ public class CambiarDescripcionIncidenteUseCase extends UseCase<RequestCommand<C
                 command.getPedidoId(), repository().getEventsBy(command.getPedidoId().value())
         );
 
-        pedido.cambiarDescripcionIncidente(command.getPedidoId(), command.getDescripcion());
+        pedido.cambiarDescripcionIncidente(command.getPedidoId(), command.getDescripcion(),command.getIncidenteId());
 
         emit().onResponse(new ResponseEvents(pedido.getUncommittedChanges()));
 

@@ -8,16 +8,21 @@ public class PedidoEventChange extends EventChange {
     public PedidoEventChange(Pedido pedido) {
         apply((PedidoCreado event) -> {
             pedido.factura = new Factura(event.getFacturaId(), event.getValor());
-            pedido.incidente = null;
             pedido.ubicacion = event.getUbicacion();
         });
 
-        apply((DescripcionIncidenteCambiado event) -> {
-            if(!pedido.incidente.identity().equals(event.getPedidoId())) {
-                throw new IllegalArgumentException("El pedido no existe para este identificador");
-            }
-            pedido.incidente.cambiarDescripcion(event.getDescripcion());
+        apply((IncidenteCreado event)->{
+            pedido.incidente = new Incidente(event.getIncidenteId(), event.getDescripcion());
         });
+
+        apply((DescripcionIncidenteCambiado event) -> {
+         //   if(!pedido.incidente.identity().equals(event.getIncidenteId())) {
+          //      throw new IllegalArgumentException("El pedido no existe para este identificador");
+           // }
+            pedido.incidente.cambiarNuevaDescripcion(event.getDescripcion());
+        });
+
+
 
         apply((UbicacionFinalCambiada event) -> {
             if(pedido.ubicacion.value().direccionFinal().equals(null)) {

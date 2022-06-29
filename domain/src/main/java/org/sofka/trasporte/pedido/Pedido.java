@@ -24,8 +24,12 @@ public class Pedido extends AggregateEvent<PedidoId> {
         subscribe(new PedidoEventChange(this));
     }
 
-    public void cambiarDescripcionIncidente(PedidoId pedidoId, Descripcion descripcion){
-        appendChange(new DescripcionIncidenteCambiado(pedidoId,descripcion)).apply();
+    public void crearIncidente(PedidoId pedidoId,Descripcion descripcion,IncidenteId incidenteId){
+        appendChange(new IncidenteCreado(pedidoId,descripcion, incidenteId)).apply();
+    }
+
+    public void cambiarDescripcionIncidente(PedidoId pedidoId, Descripcion descripcion, IncidenteId incidenteId){
+        appendChange(new DescripcionIncidenteCambiado(pedidoId,descripcion, incidenteId)).apply();
     }
 
     public void cambiarUbicacionFinal(PedidoId pedidoId, Ubicacion ubicacion){
