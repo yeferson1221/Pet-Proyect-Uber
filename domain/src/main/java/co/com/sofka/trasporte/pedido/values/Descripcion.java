@@ -1,5 +1,7 @@
 package co.com.sofka.trasporte.pedido.values;
 import co.com.sofka.domain.generic.ValueObject;
+import co.com.sofka.trasporte.conductor.values.Rol;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -31,4 +33,9 @@ public class Descripcion implements ValueObject<Descripcion.Props> {
         String descripcion();
         Date fecha();
     }
+
+    public Descripcion cambiarDescripcion(String descripcion){
+        return new Descripcion(descripcion,this.fecha);
+    }
+
 }
