@@ -14,8 +14,7 @@ public class Vehiculo extends Entity<VehiculoId> {
       this.marca = marca;
    }
 
-   public Vehiculo cambiarVehiculo(Marca marca) {
-     return  new Marca(marca);
+   public void  cambiarVehiculo(Marca marcaCambiada ) {
+   this.marca = marca.cambiarMarca(marcaCambiada.value());
    }
-
 }

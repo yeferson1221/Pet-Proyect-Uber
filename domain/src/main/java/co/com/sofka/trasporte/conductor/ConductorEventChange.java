@@ -18,6 +18,10 @@ public class ConductorEventChange extends EventChange {
             }
                 conductor.cuentaConductor.cambiarRol(event.getRol());
         });
+
+        apply((VehiculoCambiado event)->{
+            conductor.cambiarMarcaVehiculo(event.getConductorId(), event.getMarca());
+        });
     }
 
 }

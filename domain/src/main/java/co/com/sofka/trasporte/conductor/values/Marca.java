@@ -15,4 +15,8 @@ public class Marca implements ValueObject<String> {
     public String value() {
         return null;
     }
+
+    public Marca cambiarMarca(String marca){
+        return  new Marca(marca);
+    }
 }
