@@ -17,6 +17,6 @@ public class Rol implements ValueObject<String> {
 
     @Override
     public String value() {
-        return null;
+        return rol;
     }
 }

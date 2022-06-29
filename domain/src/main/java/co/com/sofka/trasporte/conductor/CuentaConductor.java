@@ -10,13 +10,14 @@ public class CuentaConductor extends Entity<CuentaConductorId> {
     private CuentaBancaria cuentaBancaria;
     private Rol rol;
 
-    public CuentaConductor(CuentaConductorId entityId, CuentaBancaria cuentaBancaria, Rol rol) {
+    public CuentaConductor(CuentaConductorId entityId, Rol rol) {
         super(entityId);
-        this.cuentaBancaria = cuentaBancaria;
+        this.cuentaBancaria = null;
         this.rol = rol;
     }
 
-    public void cambiarRol(Rol role){
-        this.rol=rol.cambiarRol(role.value());
+
+    public void cambiarRol(Rol role) {
+        this.rol = rol.cambiarRol(role.value());
     }
 }
