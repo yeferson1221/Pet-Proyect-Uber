@@ -31,4 +31,8 @@ public class Ubicacion implements ValueObject<Ubicacion.Props> {
         String direccionInicial();
         String direccionFinal();
     }
+
+    public Ubicacion cambiarUbicacionFinal(String direccionFinal){
+        return new Ubicacion(this.direccionInicial,direccionFinal);
+    }
 }

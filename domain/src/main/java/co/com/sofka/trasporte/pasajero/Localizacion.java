@@ -6,7 +6,6 @@ import co.com.sofka.trasporte.pasajero.values.Trayecto;
 
 public class Localizacion extends Entity<LocalizacionId> {
     private Trayecto trayecto;
-
     public Localizacion(LocalizacionId entityId, Trayecto trayecto) {
         super(entityId);
         this.trayecto = trayecto;
