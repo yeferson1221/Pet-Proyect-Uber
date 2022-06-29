@@ -7,8 +7,13 @@ import co.com.sofka.trasporte.pedido.values.IncidenteId;
 public class Incidente extends Entity<IncidenteId> {
     private Descripcion descripcion;
 
-    public Incidente(IncidenteId entityId,Descripcion descripcion) {
+    public Incidente(IncidenteId entityId, Descripcion descripcion) {
         super(entityId);
-        this.descripcion= descripcion;
+        this.descripcion = descripcion;
     }
+
+    public void cambiarDescripcion(Descripcion descripcionACambiar) {
+        this.descripcion = descripcion.cambiarDescripcion(descripcionACambiar.value().descripcion());
+    }
+
 }

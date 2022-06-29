@@ -7,7 +7,8 @@ import co.com.sofka.trasporte.pedido.values.Valor;
 public class Factura extends Entity<FacturaId> {
     private Valor valor;
 
-    public Factura(FacturaId entityId) {
+    public Factura(FacturaId entityId,Valor valor) {
         super(entityId);
+        this.valor = valor;
     }
 }
