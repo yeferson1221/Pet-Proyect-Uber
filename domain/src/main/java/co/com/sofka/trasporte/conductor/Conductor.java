@@ -33,4 +33,8 @@ public class Conductor extends AggregateEvent<ConductorId>{
     public void agregarRolCuenta(ConductorId conductorId, Rol rol){
         appendChange(new RolCambiado(conductorId,rol)).apply();
     }
+
+    public void cambiarMarcaVehiculo(ConductorId conductorId, Marca marca){
+        appendChange(new VehiculoCambiado(conductorId,marca)).apply();
+    }
 }
