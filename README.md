@@ -2,6 +2,9 @@
 # Pet-Project Colaborativo
 
 En el siguiente repositorio vamos a observar un proyecto con pautas DDD, donde se modela especificamemte el contexto del servicio de transporte, para la empresa Uber
+## Modelamiento del dominio
+- En el siguiente enlace encontramos el modelo tanto estrategico como tactico del dominio enfocado en el contexto del transporte: https://drive.google.com/file/d/1Brc6BlXwHvnjBLPFcPehtMisPcBHB4a4/view?usp=sharing
+
 
 ## Comportamiento
 Encontramos un proyecto con 2 diferentes modulos
