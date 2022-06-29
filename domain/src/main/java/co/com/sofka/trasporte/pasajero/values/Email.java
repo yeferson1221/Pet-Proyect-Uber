@@ -22,6 +22,8 @@ public class Email implements ValueObject<String> {
         return email;
     }
 
-
+    public Email cambiarEmail(String email) {
+        return new Email(email);
+    }
 
 }
