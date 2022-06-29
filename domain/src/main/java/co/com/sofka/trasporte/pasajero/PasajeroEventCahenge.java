@@ -1,6 +1,9 @@
 package co.com.sofka.trasporte.pasajero;
 
 import co.com.sofka.domain.generic.EventChange;
+import co.com.sofka.trasporte.pasajero.events.EmailCambiado;
+import co.com.sofka.trasporte.pasajero.events.PasajeroCreado;
+import co.com.sofka.trasporte.pasajero.events.RolCuentaCambiado;
 
 public class PasajeroEventCahenge extends EventChange {
     public PasajeroEventCahenge(Pasajero pasajero) {
@@ -12,6 +15,7 @@ public class PasajeroEventCahenge extends EventChange {
         });
 
         apply((EmailCambiado event) -> {
+//            pasajero.email.cambiarEmail(event.getEmail().value());
             pasajero.cambiarEmail(event.getEmail());
         });
 
@@ -21,5 +25,6 @@ public class PasajeroEventCahenge extends EventChange {
             }
             pasajero.cuentaPasajero.cambiarRol(event.getRole());
         });
+
     }
 }

@@ -2,6 +2,9 @@ package co.com.sofka.trasporte.pasajero;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.trasporte.pasajero.events.EmailCambiado;
+import co.com.sofka.trasporte.pasajero.events.PasajeroCreado;
+import co.com.sofka.trasporte.pasajero.events.RolCuentaCambiado;
 import co.com.sofka.trasporte.pasajero.values.*;
 
 import java.util.List;

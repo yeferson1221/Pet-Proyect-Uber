@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.pasajero;
+package co.com.sofka.trasporte.pasajero.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.trasporte.pasajero.values.PasajeroId;
