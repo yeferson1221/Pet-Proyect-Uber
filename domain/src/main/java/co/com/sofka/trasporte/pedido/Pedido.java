@@ -2,6 +2,9 @@ package co.com.sofka.trasporte.pedido;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.trasporte.pedido.events.DescripcionIncidenteCambiado;
+import co.com.sofka.trasporte.pedido.events.PedidoCreado;
+import co.com.sofka.trasporte.pedido.events.UbicacionFinalCambiada;
 import co.com.sofka.trasporte.pedido.values.*;
 
 import java.util.List;

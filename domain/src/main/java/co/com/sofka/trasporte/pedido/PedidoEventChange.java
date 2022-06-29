@@ -1,8 +1,8 @@
 package co.com.sofka.trasporte.pedido;
 import co.com.sofka.domain.generic.EventChange;
-import co.com.sofka.trasporte.pedido.values.DescripcionIncidenteCambiado;
-import co.com.sofka.trasporte.pedido.values.PedidoCreado;
-import co.com.sofka.trasporte.pedido.values.UbicacionFinalCambiada;
+import co.com.sofka.trasporte.pedido.events.DescripcionIncidenteCambiado;
+import co.com.sofka.trasporte.pedido.events.PedidoCreado;
+import co.com.sofka.trasporte.pedido.events.UbicacionFinalCambiada;
 
 public class PedidoEventChange extends EventChange {
     public PedidoEventChange(Pedido pedido) {
@@ -20,7 +20,7 @@ public class PedidoEventChange extends EventChange {
         });
 
         apply((UbicacionFinalCambiada event) -> {
-            if(!pedido.ubicacion.value().direccionFinal().equals(null)) {
+            if(pedido.ubicacion.value().direccionFinal().equals(null)) {
                 throw new IllegalArgumentException("La direccion no esta ingresada");
             }
             pedido.ubicacion.cambiarUbicacionFinal(event.getUbicacion().value().direccionFinal());
