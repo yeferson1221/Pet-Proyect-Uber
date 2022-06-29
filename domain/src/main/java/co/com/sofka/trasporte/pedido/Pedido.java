@@ -2,6 +2,9 @@ package co.com.sofka.trasporte.pedido;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.trasporte.pedido.events.DescripcionIncidenteCambiado;
+import co.com.sofka.trasporte.pedido.events.PedidoCreado;
+import co.com.sofka.trasporte.pedido.events.UbicacionFinalCambiada;
 import co.com.sofka.trasporte.pedido.values.*;
 
 import java.util.List;
@@ -23,6 +26,10 @@ public class Pedido extends AggregateEvent<PedidoId> {
 
     public void cambiarDescripcionIncidente(PedidoId pedidoId, Descripcion descripcion){
         appendChange(new DescripcionIncidenteCambiado(pedidoId,descripcion)).apply();
+    }
+
+    public void cambiarUbicacionFinal(PedidoId pedidoId, Ubicacion ubicacion){
+        appendChange(new UbicacionFinalCambiada(pedidoId,ubicacion)).apply();
     }
 
     public static Pedido from(PedidoId entityId, List<DomainEvent> events){

@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.pedido.values;
+package co.com.sofka.trasporte.pedido.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.trasporte.pedido.values.Descripcion;
