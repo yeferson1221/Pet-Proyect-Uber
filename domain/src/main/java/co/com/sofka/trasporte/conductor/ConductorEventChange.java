@@ -2,6 +2,7 @@ package co.com.sofka.trasporte.conductor;
 
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.trasporte.conductor.events.ConductorAgregado;
+import co.com.sofka.trasporte.conductor.events.VehiculoCambiado;
 
 public class ConductorEventChange extends EventChange {
     public ConductorEventChange(Conductor conductor) {

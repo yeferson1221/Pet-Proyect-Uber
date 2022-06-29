@@ -1,4 +1,4 @@
-package co.com.sofka.trasporte.conductor;
+package co.com.sofka.trasporte.conductor.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.trasporte.conductor.values.ConductorId;

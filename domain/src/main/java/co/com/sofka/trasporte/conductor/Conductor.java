@@ -3,6 +3,7 @@ package co.com.sofka.trasporte.conductor;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofka.trasporte.conductor.events.ConductorAgregado;
+import co.com.sofka.trasporte.conductor.events.VehiculoCambiado;
 import co.com.sofka.trasporte.conductor.values.*;
 
 import java.util.List;
