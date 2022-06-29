@@ -8,15 +8,15 @@ import co.com.sofka.trasporte.pasajero.values.PasajeroId;
 public class Pasajero extends AggregateEvent<PasajeroId> {
 
     protected CuentaPasajero cuentaPasajero;
+    protected Localizacion localizacion;
     protected MedioDepago medioDepago;
     protected Email email;
 
-    public Pasajero(PasajeroId entityId, CuentaPasajero cuentaPasajero, MedioDepago medioDepago, Email email) {
+    public Pasajero(PasajeroId entityId, CuentaPasajero cuentaPasajero, Localizacion localizacion, MedioDepago medioDepago, Email email) {
         super(entityId);
         this.cuentaPasajero = cuentaPasajero;
+        this.localizacion = localizacion;
         this.medioDepago = medioDepago;
         this.email = email;
     }
-
-
 }
