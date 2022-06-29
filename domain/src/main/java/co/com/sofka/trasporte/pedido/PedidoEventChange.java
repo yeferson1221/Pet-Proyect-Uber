@@ -1,8 +1,8 @@
 package co.com.sofka.trasporte.pedido;
-
 import co.com.sofka.domain.generic.EventChange;
 import co.com.sofka.trasporte.pedido.values.DescripcionIncidenteCambiado;
 import co.com.sofka.trasporte.pedido.values.PedidoCreado;
+import co.com.sofka.trasporte.pedido.values.UbicacionFinalCambiada;
 
 public class PedidoEventChange extends EventChange {
     public PedidoEventChange(Pedido pedido) {
@@ -14,9 +14,16 @@ public class PedidoEventChange extends EventChange {
 
         apply((DescripcionIncidenteCambiado event) -> {
             if(!pedido.incidente.identity().equals(event.getPedidoId())) {
-                throw new IllegalArgumentException("La cuenta no existe para este identificador");
+                throw new IllegalArgumentException("El pedido no existe para este identificador");
             }
             pedido.incidente.cambiarDescripcion(event.getDescripcion());
+        });
+
+        apply((UbicacionFinalCambiada event) -> {
+            if(!pedido.ubicacion.value().direccionFinal().equals(null)) {
+                throw new IllegalArgumentException("La direccion no esta ingresada");
+            }
+            pedido.ubicacion.cambiarUbicacionFinal(event.getUbicacion().value().direccionFinal());
         });
 
     }

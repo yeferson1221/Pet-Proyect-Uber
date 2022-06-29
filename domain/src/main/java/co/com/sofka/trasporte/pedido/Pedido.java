@@ -25,6 +25,10 @@ public class Pedido extends AggregateEvent<PedidoId> {
         appendChange(new DescripcionIncidenteCambiado(pedidoId,descripcion)).apply();
     }
 
+    public void cambiarUbicacionFinal(PedidoId pedidoId, Ubicacion ubicacion){
+        appendChange(new UbicacionFinalCambiada(pedidoId,ubicacion)).apply();
+    }
+
     public static Pedido from(PedidoId entityId, List<DomainEvent> events){
         var pedido = new Pedido((entityId));
         events.forEach(pedido::applyEvent);
